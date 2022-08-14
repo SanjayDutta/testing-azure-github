@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h4>02/08/1998</h4>
     <h1>{{ message }}</h1>
     <h2>Enter your Name: <input type="text" v-model=name></h2>
     <button @click="changeName">Click to change name</button>
