@@ -16,7 +16,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      message: 'Hello World',
+      message: 'Test Application',
       name:"",
       inputName:"",
       buttonClicked:true,
