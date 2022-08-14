@@ -16,7 +16,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      message: 'Test Application',
+      message: 'Testing Azure+Github Deployment',
       name:"",
       inputName:"",
       buttonClicked:true,
