@@ -4,10 +4,14 @@
     <h2>Enter your Name: <input type="text" v-model=name></h2>
     <button @click="changeName">Click to change name</button>
       <h1 v-if="buttonClicked">{{ inputName }}</h1>
+    <button @click="callApi">Get Weather</button><br>
+    {{weatherInfo}}
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'IndexPage',
   data() {
@@ -15,13 +19,21 @@ export default {
       message: 'Hello World',
       name:"",
       inputName:"",
-      buttonClicked:true
+      buttonClicked:true,
+      weatherInfo:null
     }
   },
   methods: {
     changeName() {
       this.inputName = `Hello ${this.name}`
      //this.buttonClicked = !this.buttonClicked
+    },
+    callApi(){
+      console.log('Calling API')
+      axios.get('/api/test').then(response=>{
+        console.log(response.data)
+        this.weatherInfo = response.data
+      }).catch
     }
   }
 }

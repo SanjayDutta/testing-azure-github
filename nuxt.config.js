@@ -30,7 +30,9 @@ module.exports = {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
-
+  serverMiddleware: [
+    '~/api/index.js'
+  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
